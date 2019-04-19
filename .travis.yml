@@ -8,7 +8,7 @@ matrix:
       sudo: true
 # command to install dependencies
 install:
-  - pip install -e .
+  - pip install .
 # command to run tests
 script:
   - pytest
