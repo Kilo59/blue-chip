@@ -10,9 +10,9 @@ before_install:
   - pip install pipenv
 # command to install dependencies
 install:
-  - pipenv install
+  - pipenv sync
   - pip install .
-  - pipenv install --dev
+  - pipenv sync --dev
 # command to run tests
 script:
-  - pytest
+  - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
