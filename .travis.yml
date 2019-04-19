@@ -6,9 +6,12 @@ matrix:
     - python: 3.7
       dist: xenial
       sudo: true
+before_install:
+  - pip install pipenv
 # command to install dependencies
 install:
-  - pip install .
+  - pipenv install --dev --system
+  - flit install
 # command to run tests
 script:
   - pytest
