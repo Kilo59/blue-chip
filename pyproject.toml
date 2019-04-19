@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "blue_chip"
+dist-name = "blue-chip"
+author = "Gabriel Gore"
+author-email = "gabriel59kg@gmail.com"
+home-page = "https://github.com/Kilo59/blue-chip"
+requires = [
+    "black",
+    "invoke",
+    "prospector[with_pyroma]",]
+requires-python = ">=3.6"
+description-file = "README.md"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Development Status :: 2 - Pre-Alpha",]
+
+[tool.flit.scripts]
+bc = "blue_chip.__main__:program.run"

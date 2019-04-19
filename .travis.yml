@@ -1,0 +1,23 @@
+language: python
+cache: pip
+# Enable 3.7 without globally enabling sudo and dist: xenial for other build jobs
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+before_install:
+  - pip install pipenv
+# command to install dependencies
+install:
+  - pipenv sync
+  - pip install .
+  - pipenv sync --dev
+# command to run tests
+script:
+  - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
+deploy:
+  provider: script
+  script: config/deploy.sh
+  on:
+    branch: master

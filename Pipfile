@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+black = "==19.3b0"
+invoke = "*"
+prospector = {extras = ["with_pyroma"],version = "*"}
+
+[dev-packages]
+flit = "*"
+pytest = "*"
+pytest-cov = "*"
+bumpversion = "*"
+
+[requires]
+python_version = "3.7"
