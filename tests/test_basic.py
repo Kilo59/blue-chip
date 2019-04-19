@@ -7,6 +7,7 @@ import pytest
 
 ROOT = (pathlib.Path(__file__) / ".." / "..").resolve()
 
+
 def test_for_fire():
     all_modules = find_packages(exclude=["tests"])
     on_fire = {}
@@ -21,9 +22,10 @@ def test_for_fire():
         except Exception as error:
             on_fire[module] = error
             print(f"❌  {module}")
-    
+
     if on_fire:
         raise ImportError(", ".join(on_fire.keys()))
+
 
 if __name__ == "__main__":
     print(ROOT)

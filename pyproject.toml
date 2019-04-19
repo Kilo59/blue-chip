@@ -12,3 +12,6 @@ requires = [
     "invoke",
     "prospector[with_pyroma]",]
 requires-python = ">=3.6"
+
+[tool.flit.scripts]
+bc = "blue_chip.__main__:program.run"

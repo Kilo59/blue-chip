@@ -5,7 +5,7 @@ Invoke tasks file
 """
 from invoke import task
 
-from . import constants
+from blue_chip import constants
 
 
 @task

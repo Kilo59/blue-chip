@@ -1,5 +1,9 @@
+"""
+blue_chip.__main__.py
+~~~~~~~~~~~~~~~~~~~~~
+"""
 from invoke import Collection, Program  # pylint: disable=import-error
-from . import tasks
+from blue_chip import tasks
 
 
 # pylint: disable=invalid-name
