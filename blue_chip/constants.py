@@ -1,0 +1,1 @@
+LINE_LENGTH = 88
