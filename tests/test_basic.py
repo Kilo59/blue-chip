@@ -1,11 +1,12 @@
 """tests/test_basic.py"""
+import subprocess
 import pathlib
 import importlib
 from setuptools import find_packages
 
 import pytest
 
-ROOT = (pathlib.Path(__file__) / ".." / "..").resolve()
+ROOT = pathlib.Path(__file__).joinpath("..").resolve()
 
 
 def test_for_fire():
@@ -25,6 +26,13 @@ def test_for_fire():
 
     if on_fire:
         raise ImportError(", ".join(on_fire.keys()))
+
+
+@pytest.mark.parametrize("cmd", ["fmt", "lint"])
+def test_noarg_cli_task(cmd):
+    cmplt_process = subprocess.run(["bc", cmd])
+    print(cmplt_process.stdout)
+    assert cmplt_process.returncode is 0
 
 
 if __name__ == "__main__":
