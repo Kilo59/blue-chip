@@ -10,8 +10,9 @@ before_install:
   - pip install pipenv
 # command to install dependencies
 install:
-  # - pipenv install --dev
+  - pipenv install
   - pip install .
+  - pipenv install --dev
 # command to run tests
 script:
   - pytest
