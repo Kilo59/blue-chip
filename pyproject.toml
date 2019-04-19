@@ -6,7 +6,7 @@ build-backend = "flit.buildapi"
 module = "blue_chip"
 author = "Gabriel Gore"
 author-email = "gabriel59kg@gmail.com"
-home-page = ""
+home-page = "https://github.com/Kilo59/blue-chip"
 requires = [
     "black",
     "invoke",
