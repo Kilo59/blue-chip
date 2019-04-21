@@ -33,10 +33,10 @@ Subcommands:
 
 ----------------------
 
-## Use in a Team
-Teams may find it useful to fork and redistribute this package with their own custom defined standards.
+## Enterprise use
+Enterprise teams may find it useful to fork and redistribute this package with their own custom defined standards.
 
 
-In many cases this is a simple as changing the package name and values in `blue_chip/constants.py`.
+In many cases this is a simple as changing the package name and values in [`blue_chip/constants.py`](https://github.com/Kilo59/blue-chip/blob/master/blue_chip/constants.py).
 
-For fine grain control of the static analysis tools, edit the `prospector` profiles in `blue_chip/lint_config`.
+For fine grain control of the static analysis tools, edit the `prospector` profiles in [`blue_chip/lint_config`](https://github.com/Kilo59/blue-chip/blob/master/blue_chip/lint_config).

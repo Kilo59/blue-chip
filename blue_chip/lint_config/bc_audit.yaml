@@ -1,0 +1,30 @@
+strictness: veryhigh
+test-warnings: false
+doc-warnings: true
+
+pylint:
+  options:
+    # max-args default = 5
+    max-args: 5
+    # max-locals default = 15
+    max-locals: 15
+    # max-branches default = 15
+    max-branches: 15
+  disable:
+    - line-too-long
+    - logging-fstring-interpolation
+    - bad-continuation
+
+mccabe:
+  options:
+    max-complexity: 8
+
+pep8:
+  options:
+    max-line-length: 100
+    single-line-if-stmt: n
+
+pyroma:
+  run: True
+  disable:
+    - PYR18
