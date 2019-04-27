@@ -16,6 +16,8 @@ install:
 # command to run tests
 script:
   - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
+after_script:
+  - ls
 deploy:
   provider: script
   script: config/deploy.sh
