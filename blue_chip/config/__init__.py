@@ -1,3 +1,7 @@
-from . import data, lint
+"""
+blue_chip.config.__init__.py
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~py
+"""
+from . import data
 
-__all__ = ["data", "lint"]
+__all__ = ["data"]

@@ -1,3 +1,7 @@
+"""
+blue_chip.config.data.py
+~~~~~~~~~~~~~~~~~~~~~~~~
+"""
 from blue_chip.constants import LINE_LENGTH
 
 LINT_DATA = {
@@ -16,6 +20,10 @@ pep8:
 pep257:
   disable:
     - D400
+    # blank line required between summary line and description
+    - D205
+    # Multi-line docstring summary should start at the first line
+    - D212
 """,
     "bc_audit.yaml": f"""strictness: veryhigh
 test-warnings: false

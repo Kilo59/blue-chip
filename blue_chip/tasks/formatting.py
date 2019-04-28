@@ -1,3 +1,7 @@
+"""
+blue_chip.tasks.formatting.py
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""
 from invoke import task
 
 from blue_chip import constants
