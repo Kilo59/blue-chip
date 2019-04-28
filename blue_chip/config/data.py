@@ -12,13 +12,17 @@ LINT_DATA = {
 pep8:
   options:
     max-line-length: {LINE_LENGTH}
+
+pep257:
+  disable:
+    - D400
 """,
     "bc_audit.yaml": f"""strictness: veryhigh
 test-warnings: false
 doc-warnings: true
 
 inherits:
-  - bc_root.yaml.yaml
+  - bc_root.yaml
 
 pylint:
   options:
