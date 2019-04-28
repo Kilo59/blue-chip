@@ -23,8 +23,3 @@ after_script:
   - bc lint
 after_success:
   - coveralls
-deploy:
-  provider: script
-  script: config/deploy.sh
-  on:
-    branch: master
