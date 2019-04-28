@@ -1,7 +1,6 @@
 """
-blue_chip.tasks.py
-~~~~~~~~~~~~~~~~~~
-Invoke tasks file
+blue_chip.tasks.formatting.py
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 from invoke import task
 
@@ -21,9 +20,3 @@ def fmt(ctx, line_length=constants.LINE_LENGTH, targets="."):
     if isinstance(targets, (list, tuple, set)):
         targets = " ".join(targets)
     ctx.run(f"black --line-length {line_length} {targets}")
-
-
-@task
-def lint(ctx, targets="."):
-    """Run static analysis on python source code."""
-    ctx.run(f"prospector {targets}")

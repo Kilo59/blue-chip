@@ -7,6 +7,7 @@ matrix:
       dist: xenial
       sudo: true
 before_install:
+  - sudo apt-get install -y tree
   - pip install pipenv
 # command to install dependencies
 install:
@@ -16,6 +17,12 @@ install:
 # command to run tests
 script:
   - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
+after_script:
+  - tree -C --dirsfirst -I '*.pyc'
+  - invoke clean --lintrc
+  - bc lint
+after_success:
+  - coveralls
 deploy:
   provider: script
   script: config/deploy.sh
