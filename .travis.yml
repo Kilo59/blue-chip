@@ -19,6 +19,8 @@ script:
   - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
 after_script:
   - tree -C --dirsfirst -I '*.pyc'
+  - invoke clean --lintrc
+  - bc lint
 deploy:
   provider: script
   script: config/deploy.sh

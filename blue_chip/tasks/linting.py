@@ -30,8 +30,8 @@ def cfg_lint(ctx):  # pylint:disable=unused-argument
         with open(profile_path, mode="w") as f_out:
             f_out.write(profile_content)
     print(
-        "Lint configuration profiles created at:",
-        f" {constants.BC_LINTRC_PATH}\n{STAR_SEP}",
+        "Lint configuration profiles created at:\n",
+        f"\t{constants.BC_LINTRC_PATH}\n{STAR_SEP}",
     )
 
 
