@@ -21,6 +21,8 @@ after_script:
   - tree -C --dirsfirst -I '*.pyc'
   - invoke clean --lintrc
   - bc lint
+after_success:
+  - coveralls
 deploy:
   provider: script
   script: config/deploy.sh
