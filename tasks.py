@@ -18,4 +18,5 @@ def clean(ctx, docs=False, bytecode=False, lintrc=False, extra=""):
     if extra:
         patterns.append(extra)
     for pattern in patterns:
+        print(f"cleaning {pattern}...")
         ctx.run(f"rm -rf {pattern}")

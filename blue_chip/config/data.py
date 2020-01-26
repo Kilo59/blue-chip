@@ -9,9 +9,10 @@ LINT_DATA = {
   disable:
     # covered by pep8
     - line-too-long
-    - logging-fstring-interpolation
     # black conflict
     - bad-continuation
+  options:
+    logging-format-style: "fstr"
 
 pep8:
   options:
@@ -20,6 +21,8 @@ pep8:
 pep257:
   disable:
     - D400
+    # First line rules conflict with sphinx requirements.
+    - D415
     # blank line required between summary line and description
     - D205
     # Multi-line docstring summary should start at the first line

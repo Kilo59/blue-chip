@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-black = "==19.3b0"
+black = "==19.10b0"
 invoke = "*"
 prospector = {extras = ["with_pyroma"],version = "*"}
 
@@ -12,6 +12,7 @@ prospector = {extras = ["with_pyroma"],version = "*"}
 flit = "*"
 pytest = "*"
 pytest-cov = "*"
+coveralls = "*"
 bumpversion = "*"
 
 [requires]
