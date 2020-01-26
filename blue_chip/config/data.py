@@ -9,9 +9,10 @@ LINT_DATA = {
   disable:
     # covered by pep8
     - line-too-long
-    - logging-fstring-interpolation
     # black conflict
     - bad-continuation
+  options:
+    logging-format-style: "fstr"
 
 pep8:
   options:
