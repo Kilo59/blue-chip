@@ -18,7 +18,7 @@ from blue_chip import constants
     },
 )
 def sort(ctx, line_length=constants.LINE_LENGTH, targets="."):
-    """Sort module imports"""
+    """Sort module imports."""
     print("sorting imports ...")
     args = [
         "isort",
