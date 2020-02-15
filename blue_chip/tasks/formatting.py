@@ -18,7 +18,20 @@ from blue_chip import constants
 def sort(ctx, line_length=constants.LINE_LENGTH, targets="."):
     """Sort module imports"""
     print("sorting imports ...")
-    args = ["isort", "-l", str(line_length), "-rc", "--atomic", targets]
+    args = [
+        "isort",
+        "--use-parentheses",
+        "--trailing-comma",
+        "--force-grid-wrap",
+        "0",
+        "--multi-line",
+        "3",
+        "-l",
+        str(line_length),
+        "-rc",
+        "--atomic",
+        targets,
+    ]
     ctx.run(" ".join(args))
 
 
