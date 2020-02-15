@@ -28,7 +28,7 @@ def test_for_fire():
         raise ImportError(", ".join(on_fire.keys()))
 
 
-@pytest.mark.parametrize("cmd", ["fmt", "lint"])
+@pytest.mark.parametrize("cmd", ["fmt", "lint", "sort"])
 def test_noarg_cli_task(cmd):
     cmplt_process = subprocess.run(["bc", cmd])
     print(cmplt_process.stdout)
