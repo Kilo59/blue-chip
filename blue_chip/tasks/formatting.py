@@ -46,6 +46,7 @@ def sort(ctx, line_length=constants.LINE_LENGTH, targets="."):
 )
 def fmt(ctx, line_length=constants.LINE_LENGTH, targets="."):
     """Format python source code."""
+    print("formatting ...")
     if isinstance(targets, (list, tuple, set)):
         targets = " ".join(targets)
     ctx.run(f"black --line-length {line_length} {targets}")
