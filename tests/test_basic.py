@@ -1,10 +1,10 @@
 """tests/test_basic.py"""
-import subprocess
-import pathlib
 import importlib
-from setuptools import find_packages
+import pathlib
+import subprocess
 
 import pytest
+from setuptools import find_packages
 
 ROOT = pathlib.Path(__file__).joinpath("..").resolve()
 
