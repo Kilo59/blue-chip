@@ -13,7 +13,23 @@ from blue_chip import constants
             constants.LINE_LENGTH
         ),
         "targets": "Paths/directories to format. [default: . ]",
-    }
+    },
+)
+def sort(ctx, line_length=constants.LINE_LENGTH, targets="."):
+    """Sort module imports"""
+    print("sorting imports ...")
+    args = ["isort", "-l", str(line_length), "-rc", "--atomic", targets]
+    ctx.run(" ".join(args))
+
+
+@task(
+    pre=[sort],
+    help={
+        "line-length": "How many characters per line to allow. [default: {}]".format(
+            constants.LINE_LENGTH
+        ),
+        "targets": "Paths/directories to format. [default: . ]",
+    },
 )
 def fmt(ctx, line_length=constants.LINE_LENGTH, targets="."):
     """Format python source code."""
