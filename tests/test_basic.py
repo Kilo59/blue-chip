@@ -35,6 +35,17 @@ def test_noarg_cli_task(cmd):
     assert cmplt_process.returncode is 0
 
 
+@pytest.mark.parametrize(
+    "targets_arg",
+    ["foo.py", ("foo.py", "bar.py"), ["foo.py", "bar.py"], {"foo.py", "bar.py"}],
+)
+def test_fmt_cmd(targets_arg):
+    from blue_chip.tasks.formatting import _fmt_cmd
+
+    cmd_string = _fmt_cmd(88, targets_arg)
+    assert isinstance(cmd_string, str)
+
+
 if __name__ == "__main__":
     print(ROOT)
     pytest.main(args=[__file__, "-v"])
