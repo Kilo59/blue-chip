@@ -11,6 +11,7 @@ home-page = "https://github.com/Kilo59/blue-chip"
 requires = [
     "black",
     "invoke",
+    "isort",
     "prospector[with_pyroma]",]
 requires-python = ">=3.6"
 description-file = "README.md"
