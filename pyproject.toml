@@ -22,7 +22,9 @@ classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: Implementation :: CPython",
-    "Development Status :: 2 - Pre-Alpha",]
+    "Topic :: Utilities ",
+    "Topic :: Software Development :: Quality Assurance",
+    "Development Status :: 3 - Alpha",]
 
 [tool.flit.scripts]
 bc = "blue_chip.__main__:program.run"
