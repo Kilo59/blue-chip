@@ -46,6 +46,14 @@ def test_fmt_cmd(targets_arg):
     assert isinstance(cmd_string, str)
 
 
+def test_get_version():
+    from blue_chip.__main__ import get_version
+
+    version = get_version()
+    print(f"version: {version}")
+    assert version
+
+
 if __name__ == "__main__":
     print(ROOT)
     pytest.main(args=[__file__, "-v"])
