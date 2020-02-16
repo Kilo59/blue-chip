@@ -8,6 +8,8 @@ from invoke import task
 
 from blue_chip import constants
 
+__all__ = ["sort", "fmt", "fmt_only"]
+
 
 @task(
     help={

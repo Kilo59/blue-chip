@@ -11,6 +11,8 @@ from blue_chip import config, constants
 
 # pylint:disable=protected-access
 
+__all__ = ["cfg_lint", "lint"]
+
 
 STAR_SEP = "*" * get_terminal_size().columns
 
