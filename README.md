@@ -1,6 +1,7 @@
 [![PyPI version](https://badge.fury.io/py/blue-chip.svg)](https://badge.fury.io/py/blue-chip)
 [![Build Status](https://travis-ci.com/Kilo59/blue-chip.svg?branch=master)](https://travis-ci.com/Kilo59/blue-chip)
 [![Coverage Status](https://coveralls.io/repos/github/Kilo59/blue-chip/badge.svg?branch=master)](https://coveralls.io/github/Kilo59/blue-chip?branch=master)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Kilo59/blue-chip.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Kilo59/blue-chip/context:python)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 # blue-chip
