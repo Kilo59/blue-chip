@@ -1,7 +1,8 @@
 """
-blue_chip.config.__init__.py
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~py
+blue_chip.config
+~~~~~~~~~~~~~~~~
+Task configuration data
 """
-from . import data
+from blue_chip.config import data
 
 __all__ = ["data"]

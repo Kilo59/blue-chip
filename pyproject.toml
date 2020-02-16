@@ -26,6 +26,7 @@ classifiers = [
 
 [tool.flit.scripts]
 bc = "blue_chip.__main__:program.run"
+bcp = "blue_chip.__main__:program.run"
 
 [tool.isort]
 multi_line_output = 3
