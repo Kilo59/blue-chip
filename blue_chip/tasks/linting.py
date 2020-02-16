@@ -7,9 +7,7 @@ from shutil import get_terminal_size
 
 from invoke import task
 
-from blue_chip import constants
-from blue_chip import config
-
+from blue_chip import config, constants
 
 # pylint:disable=protected-access
 

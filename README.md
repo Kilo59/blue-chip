@@ -6,7 +6,7 @@
 # blue-chip
 One click Python code quality package
 
-`blue-chip` uses [`black`](https://github.com/ambv/black), [`invoke`](http://www.pyinvoke.org/) and [`prospector`](https://prospector.readthedocs.io/en/master/) configured to work well together out of the box.
+`blue-chip` uses [`black`](https://github.com/ambv/black), [`isort`](https://github.com/timothycrosley/isort), [`invoke`](http://www.pyinvoke.org/) and [`prospector`](https://prospector.readthedocs.io/en/master/) configured to work well together out of the box.
 
 -----------------------
 ## Install
@@ -30,6 +30,7 @@ Subcommands:
 
   fmt    Format python source code.
   lint   Run static analysis on python source code.
+  sort   Sort module imports.
 ```
 
 ----------------------

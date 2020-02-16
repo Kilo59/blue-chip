@@ -1,10 +1,10 @@
 """tests/test_basic.py"""
-import subprocess
-import pathlib
 import importlib
-from setuptools import find_packages
+import pathlib
+import subprocess
 
 import pytest
+from setuptools import find_packages
 
 ROOT = pathlib.Path(__file__).joinpath("..").resolve()
 
@@ -28,11 +28,22 @@ def test_for_fire():
         raise ImportError(", ".join(on_fire.keys()))
 
 
-@pytest.mark.parametrize("cmd", ["fmt", "lint"])
+@pytest.mark.parametrize("cmd", ["fmt", "lint", "sort"])
 def test_noarg_cli_task(cmd):
     cmplt_process = subprocess.run(["bc", cmd])
     print(cmplt_process.stdout)
     assert cmplt_process.returncode is 0
+
+
+@pytest.mark.parametrize(
+    "targets_arg",
+    ["foo.py", ("foo.py", "bar.py"), ["foo.py", "bar.py"], {"foo.py", "bar.py"}],
+)
+def test_fmt_cmd(targets_arg):
+    from blue_chip.tasks.formatting import _fmt_cmd
+
+    cmd_string = _fmt_cmd(88, targets_arg)
+    assert isinstance(cmd_string, str)
 
 
 if __name__ == "__main__":
