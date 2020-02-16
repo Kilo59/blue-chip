@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 black = "==19.10b0"
+isort = "*"
 invoke = "*"
 prospector = {extras = ["with_pyroma"],version = "*"}
 
