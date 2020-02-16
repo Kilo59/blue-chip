@@ -12,8 +12,8 @@ before_install:
 # command to install dependencies
 install:
   - pipenv sync
+  - pip install .
   - pipenv sync --dev
-  - flit install
 # command to run tests
 script:
   - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
