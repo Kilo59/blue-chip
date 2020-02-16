@@ -12,7 +12,7 @@ readme = "README.md"
 homepage = "https://github.com/Kilo59/blue-chip"
 repository = "https://github.com/Kilo59/blue-chip"
 classifiers = [
-    "Topic :: Utilities ",
+    "Topic :: Utilities",
     "Topic :: Software Development :: Quality Assurance",
     "Development Status :: 3 - Alpha",]
 
