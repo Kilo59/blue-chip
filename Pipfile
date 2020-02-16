@@ -1,3 +1,4 @@
+# WARNING: dependency management and publishing is now being handled with poetry
 [[source]]
 url = "https://pypi.org/simple"
 verify_ssl = true
@@ -10,7 +11,6 @@ invoke = "*"
 prospector = {extras = ["with_pyroma"],version = "*"}
 
 [dev-packages]
-flit = "*"
 pytest = "*"
 pytest-cov = "*"
 coveralls = "*"
@@ -18,7 +18,3 @@ bumpversion = "*"
 
 [requires]
 python_version = "3.7"
-
-[scripts]
-dev_install = "flit install --symlink"
-dev_install_win = "flit install --pth-file"

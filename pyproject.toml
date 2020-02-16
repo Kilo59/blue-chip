@@ -1,37 +1,39 @@
 [build-system]
-requires = ["flit"]
-build-backend = "flit.buildapi"
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
 
-[tool.flit.metadata]
-module = "blue_chip"
-dist-name = "blue-chip"
-author = "Gabriel Gore"
-author-email = "gabriel59kg@gmail.com"
-home-page = "https://github.com/Kilo59/blue-chip"
-requires = [
-    "black",
-    "invoke",
-    "isort",
-    "prospector[with_pyroma]",]
-requires-python = ">=3.6"
-description-file = "README.md"
+[tool.poetry]
+name = "blue-chip"
+version = "0.0.7"
+description = "One click Python code quality package"
+authors = ["Gabriel Gore <gabriel59kg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Kilo59/blue-chip"
+repository = "https://github.com/Kilo59/blue-chip"
 classifiers = [
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Topic :: Utilities ",
+    "Topic :: Utilities",
     "Topic :: Software Development :: Quality Assurance",
     "Development Status :: 3 - Alpha",]
 
-[tool.flit.scripts]
+[tool.poetry.dependencies]
+python = "^3.6"
+invoke = "*"
+isort = "*"
+prospector = {extras = ["with_pyroma"], version = "^1.2.0"}
+black = "19.10b0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+coveralls = "*"
+pytest-cov = "*"
+
+[tool.poetry.scripts]
 bc = "blue_chip.__main__:program.run"
 bcp = "blue_chip.__main__:program.run"
 
 [tool.isort]
+known_third_party = "invoke,pkg_resources"
 multi_line_output = 3
 include_trailing_comma = "True"
 force_grid_wrap = 0
