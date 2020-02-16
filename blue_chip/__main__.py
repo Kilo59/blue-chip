@@ -10,14 +10,14 @@ import blue_chip.tasks
 PACKAGE_NAME = "blue-chip"
 
 
-def get_version():
+def get_version(pkg_name=PACKAGE_NAME):
     """
     Get the package version.
 
     https://github.com/python-poetry/poetry/issues/144#issuecomment-559793020
     """
     try:
-        distribution = pkg_resources.get_distribution(PACKAGE_NAME)
+        distribution = pkg_resources.get_distribution(pkg_name)
     except pkg_resources.DistributionNotFound:
         return "dev"
     else:

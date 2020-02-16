@@ -3,6 +3,7 @@ import importlib
 import pathlib
 import subprocess
 
+import pkg_resources
 import pytest
 from setuptools import find_packages
 
@@ -44,6 +45,21 @@ def test_fmt_cmd(targets_arg):
 
     cmd_string = _fmt_cmd(88, targets_arg)
     assert isinstance(cmd_string, str)
+
+
+@pytest.mark.parametrize(
+    "pkg_name,expected_version",
+    [
+        ("blue-chip", pkg_resources.get_distribution("blue-chip").version),
+        ("foo-bar", "dev"),
+    ],
+)
+def test_get_version(pkg_name, expected_version):
+    from blue_chip.__main__ import get_version
+
+    version = get_version(pkg_name)
+    print(f"{pkg_name} version: {version}")
+    assert version == expected_version
 
 
 if __name__ == "__main__":

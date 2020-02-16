@@ -8,12 +8,11 @@ matrix:
       sudo: true
 before_install:
   - sudo apt-get install -y tree
-  - pip install pipenv
+  - pip install poetry
 # command to install dependencies
 install:
-  - pipenv sync
+  - poetry install --no-root -vv
   - pip install .
-  - pipenv sync --dev
 # command to run tests
 script:
   - pytest --cov-report term --cov-report xml --cov=blue_chip tests/
