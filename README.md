@@ -13,13 +13,22 @@ One click Python code quality package
 -----------------------
 ## Install
 
-The recommended installation method is to use [`pipx`](https://github.com/pipxproject/pipx)
+The recommended installation method when installing globally is to use [`pipx`](https://github.com/pipxproject/pipx)
+
 ```
 pipx install blue-chip
 ```
-Or use `pip`
+Otherwise (for best results) use `pip` to install directly into your project's virtual environment.
 ```
-pip install blue-chip --user
+pip install blue-chip
+```
+Using [`poetry`](https://python-poetry.org/).
+```
+poetry add --dev blue-chip
+```
+Using [`pipenv`](https://pipenv.pypa.io/en/latest/) you need to pin the version.
+```
+pipenv install --dev blue-chip==0.0.8
 ```
 
 ## Command-line use
