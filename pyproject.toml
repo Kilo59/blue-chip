@@ -7,14 +7,15 @@ name = "blue-chip"
 version = "0.0.7"
 description = "One click Python code quality package"
 authors = ["Gabriel Gore <gabriel59kg@gmail.com>"]
-license = "MIT"
+license = "GPLv2"
 readme = "README.md"
 homepage = "https://github.com/Kilo59/blue-chip"
 repository = "https://github.com/Kilo59/blue-chip"
 classifiers = [
     "Topic :: Utilities",
     "Topic :: Software Development :: Quality Assurance",
-    "Development Status :: 3 - Alpha",]
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
