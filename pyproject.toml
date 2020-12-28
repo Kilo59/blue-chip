@@ -9,7 +9,7 @@ description = "One click Python code quality package"
 authors = ["Gabriel Gore <gabriel59kg@gmail.com>"]
 license = "GPLv2"
 readme = "README.md"
-homepage = "https://github.com/Kilo59/blue-chip"
+homepage = "https://pypi.org/project/blue-chip/"
 repository = "https://github.com/Kilo59/blue-chip"
 classifiers = [
     "Topic :: Utilities",
