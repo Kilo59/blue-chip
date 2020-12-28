@@ -4,7 +4,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "blue-chip"
-version = "0.0.7"
+version = "0.0.8"
 description = "One click Python code quality package"
 authors = ["Gabriel Gore <gabriel59kg@gmail.com>"]
 license = "GPLv2"
@@ -14,8 +14,7 @@ repository = "https://github.com/Kilo59/blue-chip"
 classifiers = [
     "Topic :: Utilities",
     "Topic :: Software Development :: Quality Assurance",
-    "Development Status :: 3 - Alpha",
-    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)"]
+    "Development Status :: 3 - Alpha",]
 
 [tool.poetry.dependencies]
 python = "^3.6"
