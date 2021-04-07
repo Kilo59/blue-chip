@@ -11,8 +11,8 @@ LINT_DATA = {
     - line-too-long
     # black conflict
     - bad-continuation
-  options:
-    logging-format-style: "fstr"
+    # ignore f-string logging warning
+    - f-string-without-interpolation
 
 pep8:
   options:
@@ -28,7 +28,7 @@ pep257:
     # Multi-line docstring summary should start at the first line
     - D212
 """,
-    "bc_audit.yaml": f"""strictness: veryhigh
+    "bc_audit.yaml": """strictness: veryhigh
 test-warnings: false
 doc-warnings: true
 
@@ -53,7 +53,7 @@ pyroma:
   disable:
     - PYR18
 """,
-    "bc_default.yaml": f"""strictness: veryhigh
+    "bc_default.yaml": """strictness: veryhigh
 test-warnings: false
 doc-warnings: true
 
@@ -85,7 +85,7 @@ mccabe:
 pep257:
   run: True
 """,
-    "bc_tests.yaml": f"""inherits:
+    "bc_tests.yaml": """inherits:
   - bc_default.yaml
 
 strictness: high
