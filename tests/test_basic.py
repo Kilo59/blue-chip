@@ -31,7 +31,7 @@ def test_for_fire():
 
 @pytest.mark.parametrize("cmd", ["fmt", "lint", "sort"])
 def test_noarg_cli_task(cmd):
-    cmplt_process = subprocess.run(["bcp", cmd])
+    cmplt_process = subprocess.run(["bcpy", cmd])
     print(cmplt_process.stdout)
     assert cmplt_process.returncode is 0
 

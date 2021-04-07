@@ -30,7 +30,7 @@ pytest-cov = "*"
 
 [tool.poetry.scripts]
 bc = "blue_chip.__main__:program.run"
-bcp = "blue_chip.__main__:program.run"
+bcpy = "blue_chip.__main__:program.run"
 
 [tool.isort]
 known_third_party = "invoke,pkg_resources"
