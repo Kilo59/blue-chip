@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: urllib3
+    versions:
+    - 1.26.3
+    - 1.26.4
+  - dependency-name: pytest
+    versions:
+    - 6.2.2
+  - dependency-name: coveralls
+    versions:
+    - 3.0.0
