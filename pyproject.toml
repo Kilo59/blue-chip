@@ -20,7 +20,7 @@ classifiers = [
 python = "^3.6"
 invoke = "*"
 isort = "^4"
-prospector = {extras = ["with_pyroma"], version = "1.2.*"}
+prospector = {extras = ["with_pyroma"], version = ">=1.2,<1.4"}
 black = "19.10b0"
 
 [tool.poetry.dev-dependencies]

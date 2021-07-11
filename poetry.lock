@@ -8,17 +8,17 @@ python-versions = "*"
 
 [[package]]
 name = "astroid"
-version = "2.3.3"
+version = "2.4.1"
 description = "An abstract syntax tree for Python with inference support."
 category = "main"
 optional = false
-python-versions = ">=3.5.*"
+python-versions = ">=3.5"
 
 [package.dependencies]
 lazy-object-proxy = ">=1.4.0,<1.5.0"
 six = ">=1.12,<2.0"
 typed-ast = {version = ">=1.4.0,<1.5", markers = "implementation_name == \"cpython\" and python_version < \"3.8\""}
-wrapt = ">=1.11.0,<1.12.0"
+wrapt = ">=1.11,<2.0"
 
 [[package]]
 name = "atomicwrites"
@@ -258,23 +258,23 @@ dev = ["pre-commit", "tox"]
 
 [[package]]
 name = "prospector"
-version = "1.2.0"
+version = "1.3.1"
 description = "Prospector: python static analysis tool"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-astroid = "2.3.3"
+astroid = "2.4.1"
 dodgy = ">=0.1.9"
 mccabe = ">=0.5.0"
-pep8-naming = ">=0.3.3,<=0.4.1"
-pycodestyle = ">=2.0.0,<=2.4.0"
+pep8-naming = ">=0.3.3,<=0.10.0"
+pycodestyle = ">=2.6.0,<2.7.0"
 pydocstyle = ">=2.0.0"
-pyflakes = ">=0.8.1,<2.2.0"
-pylint = "2.4.4"
+pyflakes = ">=2.2.0,<2.3.0"
+pylint = "2.5.3"
 pylint-celery = "0.3"
-pylint-django = "2.0.12"
+pylint-django = "<2.2.0"
 pylint-flask = "0.6"
 pylint-plugin-utils = ">=0.2.6"
 pyroma = {version = ">=2.4", optional = true, markers = "extra == \"with_pyroma\""}
@@ -283,13 +283,12 @@ requirements-detector = ">=0.6"
 setoptconf = ">=0.2.0"
 
 [package.extras]
-build_tools = ["nose", "coverage", "coveralls", "mock"]
 with_bandit = ["bandit (>=1.5.1)"]
-with_everything = ["bandit (>=1.5.1)", "coverage", "coveralls", "frosted (>=1.4.1)", "mock", "mypy (>=0.600)", "nose", "pyroma (>=2.4)", "vulture (>=0.6,<0.25)"]
+with_everything = ["bandit (>=1.5.1)", "frosted (>=1.4.1)", "mypy (>=0.600)", "pyroma (>=2.4)", "vulture (>=1.5)"]
 with_frosted = ["frosted (>=1.4.1)"]
 with_mypy = ["mypy (>=0.600)"]
 with_pyroma = ["pyroma (>=2.4)"]
-with_vulture = ["vulture (>=0.6,<0.25)"]
+with_vulture = ["vulture (>=1.5)"]
 
 [[package]]
 name = "py"
@@ -301,11 +300,11 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pycodestyle"
-version = "2.4.0"
+version = "2.6.0"
 description = "Python style guide checker"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pydocstyle"
@@ -320,7 +319,7 @@ snowballstemmer = "*"
 
 [[package]]
 name = "pyflakes"
-version = "2.1.1"
+version = "2.2.0"
 description = "passive checker of Python programs"
 category = "main"
 optional = false
@@ -336,17 +335,18 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "pylint"
-version = "2.4.4"
+version = "2.5.3"
 description = "python code static checker"
 category = "main"
 optional = false
 python-versions = ">=3.5.*"
 
 [package.dependencies]
-astroid = ">=2.3.0,<2.4"
+astroid = ">=2.4.0,<=2.5"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
 isort = ">=4.2.5,<5"
 mccabe = ">=0.6,<0.7"
+toml = ">=0.7.1"
 
 [[package]]
 name = "pylint-celery"
@@ -588,7 +588,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "dc70035e3e25b1941434302a4af7ce8ff03d8c3f5c7984e6836fb7572d1b2da4"
+content-hash = "89651d293aa813cc1e45254c2e00ca56c6af863d492138882dc6bb707cdc7e42"
 
 [metadata.files]
 appdirs = [
@@ -596,8 +596,8 @@ appdirs = [
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
 ]
 astroid = [
-    {file = "astroid-2.3.3-py3-none-any.whl", hash = "sha256:840947ebfa8b58f318d42301cf8c0a20fd794a33b61cc4638e28e9e61ba32f42"},
-    {file = "astroid-2.3.3.tar.gz", hash = "sha256:71ea07f44df9568a75d0f354c49143a4575d90645e9fead6dfb52c26a85ed13a"},
+    {file = "astroid-2.4.1-py3-none-any.whl", hash = "sha256:d8506842a3faf734b81599c8b98dcc423de863adcc1999248480b18bd31a0f38"},
+    {file = "astroid-2.4.1.tar.gz", hash = "sha256:4c17cea3e592c21b6e222f673868961bad77e1f985cb1694ed077475a89229c1"},
 ]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
@@ -758,32 +758,31 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 prospector = [
-    {file = "prospector-1.2.0.tar.gz", hash = "sha256:ea910794b53cfefcb5dfb6b4eb0323e42d1a88132e165b85b016cc7f0b6ae635"},
+    {file = "prospector-1.3.1.tar.gz", hash = "sha256:700d7918d93d73035a2a58fb18c6be0b609a0481fc6e0908843fa856b89e52c6"},
 ]
 py = [
     {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
     {file = "py-1.10.0.tar.gz", hash = "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3"},
 ]
 pycodestyle = [
-    {file = "pycodestyle-2.4.0-py2.py3-none-any.whl", hash = "sha256:cbc619d09254895b0d12c2c691e237b2e91e9b2ecf5e84c26b35400f93dcfb83"},
-    {file = "pycodestyle-2.4.0-py3.6.egg", hash = "sha256:74abc4e221d393ea5ce1f129ea6903209940c1ecd29e002e8c6933c2b21026e0"},
-    {file = "pycodestyle-2.4.0.tar.gz", hash = "sha256:cbfca99bd594a10f674d0cd97a3d802a1fdef635d4361e1a2658de47ed261e3a"},
+    {file = "pycodestyle-2.6.0-py2.py3-none-any.whl", hash = "sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367"},
+    {file = "pycodestyle-2.6.0.tar.gz", hash = "sha256:c58a7d2815e0e8d7972bf1803331fb0152f867bd89adf8a01dfd55085434192e"},
 ]
 pydocstyle = [
     {file = "pydocstyle-5.1.1-py3-none-any.whl", hash = "sha256:aca749e190a01726a4fb472dd4ef23b5c9da7b9205c0a7857c06533de13fd678"},
     {file = "pydocstyle-5.1.1.tar.gz", hash = "sha256:19b86fa8617ed916776a11cd8bc0197e5b9856d5433b777f51a3defe13075325"},
 ]
 pyflakes = [
-    {file = "pyflakes-2.1.1-py2.py3-none-any.whl", hash = "sha256:17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0"},
-    {file = "pyflakes-2.1.1.tar.gz", hash = "sha256:d976835886f8c5b31d47970ed689944a0262b5f3afa00a5a7b4dc81e5449f8a2"},
+    {file = "pyflakes-2.2.0-py2.py3-none-any.whl", hash = "sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92"},
+    {file = "pyflakes-2.2.0.tar.gz", hash = "sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8"},
 ]
 pygments = [
     {file = "Pygments-2.7.3-py3-none-any.whl", hash = "sha256:f275b6c0909e5dafd2d6269a656aa90fa58ebf4a74f8fcf9053195d226b24a08"},
     {file = "Pygments-2.7.3.tar.gz", hash = "sha256:ccf3acacf3782cbed4a989426012f1c535c9a90d3a7fc3f16d231b9372d2b716"},
 ]
 pylint = [
-    {file = "pylint-2.4.4-py3-none-any.whl", hash = "sha256:886e6afc935ea2590b462664b161ca9a5e40168ea99e5300935f6591ad467df4"},
-    {file = "pylint-2.4.4.tar.gz", hash = "sha256:3db5468ad013380e987410a8d6956226963aed94ecb5f9d3a28acca6d9ac36cd"},
+    {file = "pylint-2.5.3-py3-none-any.whl", hash = "sha256:d0ece7d223fe422088b0e8f13fa0a1e8eb745ebffcb8ed53d3e95394b6101a1c"},
+    {file = "pylint-2.5.3.tar.gz", hash = "sha256:7dd78437f2d8d019717dbf287772d0b2dbdfd13fc016aa7faa08d67bccc46adc"},
 ]
 pylint-celery = [
     {file = "pylint-celery-0.3.tar.gz", hash = "sha256:41e32094e7408d15c044178ea828dd524beedbdbe6f83f712c5e35bde1de4beb"},
