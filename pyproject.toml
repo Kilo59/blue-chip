@@ -21,7 +21,7 @@ python = "^3.6"
 invoke = "*"
 isort = "^4"
 prospector = {extras = ["with_pyroma"], version = "1.2.*"}
-black = "19.10b0"
+black = "20.8b1"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
