@@ -13,9 +13,8 @@ __all__ = ["sort", "fmt", "fmt_only"]
 
 @task(
     help={
-        "line-length": "How many characters per line to allow. [default: {}]".format(
-            constants.LINE_LENGTH
-        ),
+        "line-length": "How many characters per line to allow."
+        f" [default: { constants.LINE_LENGTH}]",
         "targets": "Paths/directories to format. [default: . ]",
     },
 )
@@ -51,9 +50,8 @@ def _fmt_cmd(line_length: int, targets: Union[str, List[str]]) -> str:
 @task(
     pre=[sort],
     help={
-        "line-length": "How many characters per line to allow. [default: {}]".format(
-            constants.LINE_LENGTH
-        ),
+        "line-length": "How many characters per line to allow."
+        f" [default: {constants.LINE_LENGTH}]",
         "targets": "Paths/directories to format. [default: . ]",
     },
 )
@@ -65,9 +63,8 @@ def fmt(ctx, line_length=constants.LINE_LENGTH, targets="."):
 
 @task(
     help={
-        "line-length": "How many characters per line to allow. [default: {}]".format(
-            constants.LINE_LENGTH
-        ),
+        "line-length": "How many characters per line to allow."
+        f" [default: {constants.LINE_LENGTH}]",
         "targets": "Paths/directories to format. [default: . ]",
     },
 )
