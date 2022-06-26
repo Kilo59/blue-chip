@@ -34,8 +34,10 @@ def sort(ctx, line_length=constants.LINE_LENGTH, targets=".", check=False):
     ctx.run(" ".join(args))
 
 
-def _fmt_cmd(line_length: int, targets: Union[str, List[str]]) -> str:
+def _fmt_cmd(line_length: int, targets: Union[str, List[str]], check=False) -> str:
     args = ["black", "--line-length", str(line_length)]
+    if check:
+        args.append("--check")
     if isinstance(targets, (list, tuple, set)):
         args.extend(targets)
     else:
@@ -51,10 +53,10 @@ def _fmt_cmd(line_length: int, targets: Union[str, List[str]]) -> str:
         "targets": "Paths/directories to format. [default: . ]",
     },
 )
-def fmt(ctx, line_length=constants.LINE_LENGTH, targets="."):
+def fmt(ctx, line_length=constants.LINE_LENGTH, targets=".", check=False):
     """Format python source code & sort imports."""
     print("formatting ...")
-    ctx.run(_fmt_cmd(line_length, targets))
+    ctx.run(_fmt_cmd(line_length, targets, check))
 
 
 @task(
