@@ -9,7 +9,6 @@ from invoke import task
 
 from blue_chip import config, constants
 
-
 __all__ = ["cfg_lint", "lint"]
 
 
