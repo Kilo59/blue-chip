@@ -18,23 +18,19 @@ __all__ = ["sort", "fmt", "fmt_only"]
         "targets": "Paths/directories to format. [default: . ]",
     },
 )
-def sort(ctx, line_length=constants.LINE_LENGTH, targets="."):
+def sort(ctx, line_length=constants.LINE_LENGTH, targets=".", check=False):
     """Sort module imports."""
     print("sorting imports ...")
     args = [
         "isort",
-        "--use-parentheses",
-        "--trailing-comma",
-        "--force-grid-wrap",
-        "0",
-        "--multi-line",
-        "3",
+        "--profile",
+        "black",
         "-l",
         str(line_length),
-        "-rc",
-        "--atomic",
         targets,
     ]
+    if check:
+        args.append("--check-only")
     ctx.run(" ".join(args))
 
 
