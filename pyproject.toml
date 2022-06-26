@@ -4,7 +4,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "blue-chip"
-version = "0.0.8"
+version = "0.0.9"
 description = "One click Python code quality package"
 authors = ["Gabriel Gore <gabriel59kg@gmail.com>"]
 license = "GPLv2"
@@ -17,11 +17,11 @@ classifiers = [
     "Development Status :: 3 - Alpha",]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.2"
 invoke = "*"
-isort = "^4"
-prospector = {extras = ["with_pyroma"], version = "1.2.*"}
-black = "19.10b0"
+isort = "^5.10.1"
+prospector = {extras = ["with_pyroma"], version = "^1.2"}
+black = "^22.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

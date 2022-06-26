@@ -3,7 +3,7 @@ blue_chip.__main__.py
 ~~~~~~~~~~~~~~~~~~~~~
 """
 import pkg_resources
-from invoke import Collection, Program  # pylint: disable=import-error
+from invoke import Collection, Program
 
 import blue_chip.tasks
 
@@ -26,7 +26,6 @@ def get_version(pkg_name=PACKAGE_NAME):
 
 PKG_VERSION = get_version()
 
-# pylint: disable=invalid-name
 program = Program(
     namespace=Collection.from_module(blue_chip.tasks),
     name=PACKAGE_NAME,
